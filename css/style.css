@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+section{
+    overflow-x: clip;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.container{
+    max-width: 1530px;
+    margin: auto;
+    padding: 0 10px;
+}
+header{
+    padding: 50px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    animation: slide-down 1.5s;
+}
+.main-navigation{
+    display: flex;
+    justify-content: space-between;
+}
+.main-navigation nav{
+    display: flex;
+    gap: 40px;
+    border: 1px solid #1c1c1c;
+    padding: 15px 50px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+.main-navigation nav a{
+    transition: 0.3s;
+}
+.main-navigation nav a:hover{
+    color: #1f8053 ;
+}
+.main-navigation img{
+   filter:drop-shadow(0 0 30px black);
+}
+.sec-cta-button{
+    padding: 15px 20px;
+    border-radius: 30px;
+    background-color: black;
+    border: 1px solid #1c1c1c;
+    transition: 0.3s;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    position: relative;
+}
+.sec-cta-button:hover{
+    border-color: #1f8053;
+}
+.sec-cta-button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+.sec-cta-button:hover::before{
+     background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%, rgba(31, 128, 83, 0.3) 50%, rgba(0, 0, 0, 0.3) 100%);
+}
+.btn-arrow-wrapper{
+    overflow: hidden;
+    width: 17px;
+    height: 17px;
+}
+.btn-arrow-wrapper img{
+    transform: translate(0,0) rotate(-45deg);
+}
+.cta-button{
+    display: inline-block;
+    background: linear-gradient(90deg,rgba(31, 128, 83, 1) 0%, rgba(0, 0, 0, 0.5) 65%);
+    padding: 3px;
+    border-radius: 30px;
+}
+.cta-button:hover{
+    background: linear-gradient(90deg,rgba(31, 128, 83, 1) 0%, rgba(31, 128, 83, 1) 100%);
+}
+.cta-button .black-btn-bg{
+    background-color: black;
+    padding: 15px 20px;
+    border-radius: 30px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    box-shadow: 0 0 20px 0 rgba(31, 128, 83, 0.75) ;
+}
+.cta-button:hover .black-btn-bg{
+    animation: puls-shadow 3s infinite;
+}
+a:hover .btn-arrow-wrapper img {
+    animation: arrow-moving 0.3s linear;
+}
+.hero{
+    position: relative;
+    height: 100vh;
+    padding-top: 200px;
+}
+.hero::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+.hero video{
+    transform: rotate(180deg);
+    width: 100%;
+}
+.video-wrapper{
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    width: 70%;
+}
+.hero-content{
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+.hero-content h1{
+    font-size: 9.375rem;
+    font-weight: 800;
+    line-height: 1.2;
+    background: linear-gradient(90deg, rgba(150, 209, 176, 1) 0%, rgba(198, 198, 198, 1) 50%, rgba(150, 209, 176, 1) 100%);
+    color: transparent;
+    background-clip: text;
+    animation: fade-in 3s;
+}
+.hero .hero-content h2{
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 1;
+}
+.hero .hero-content p{
+    font-size: 1.5rem;
+    max-width: 880px;
+    font-weight: 300;
+    
+}
+.hero-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.hero .video-wrapper .video-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.hero .hero-lines{
+    position: absolute;
+    z-index: 1;
+    opacity: 0.2;
+    height: 70%;
+}
+.portfolio{
+    padding: 50px 0;
+
+}
+.portfolio .portfolio-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.section-heading{
+    font-size: 3.75rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, rgba(150, 209, 176, 1) 0%, rgba(198, 198, 198, 1) 50%, rgba(150, 209, 176, 1) 100%);
+    color: transparent;
+    background-clip: text;
+}
+.portfolio .section-heading{
+    max-width: 400px;
+}
+.portfolio-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    margin-top: 60px;
+}
+.portfolio-items .portfolio-item a .portfolio-tags{
+    display: flex;
+    gap: 10px;
+}
+.portfolio-items .portfolio-item a .portfolio-tags div{
+    font-size: 1.125rem;
+    background-color: #1c1c1c;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 300;
+}
+.portfolio-items .portfolio-item a video{
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #1c1c1c
+}
+.portfolio-items .portfolio-item a .portfolio-content-wrapper{
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.portfolio-items .portfolio-item a .portfolio-content-wrapper h3{
+    font-size: 1.875rem;
+    font-weight: 400;
+}
+.portfolio-items .portfolio-item a .portfolio-content-wrapper p{
+    font-weight: 300;
+}
+.portfolio-items .portfolio-item a{
+    position: relative;
+}
+.portfolio-items .portfolio-item::after{
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg,rgba(0,0,0,0)0%,rgba(28,28,28, 0)50%,rgba(0,0,0,0)100%);
+    display: block;
+}
+.portfolio-items .portfolio-item a::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition:0.3s;
+}
+.portfolio-items .portfolio-item a:hover::after{
+    background: radial-gradient(circle, rgba(32,128,83, 0.2) 0%, rgba(0,0,0, 0) 100%);
+    opacity: 1;
+}
+.call-to-action{
+    padding: 100px 0;
+}
+.call-to-action .reveal-text{
+    font-weight: 300;
+    font-size: 3.125rem;
+    margin-bottom: 50px;
+}
+.call-to-action .reveal-text span{
+    animation: word-fade 2s both linear;
+    animation-timeline: view();
+    animation-range: entry 30% cover 60%;
+    animation-delay: calc(var(--i) * 100ms);
+}

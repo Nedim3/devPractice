@@ -1,0 +1,90 @@
+@keyframes arrow-moving {
+    0%{
+        transform: translate(0,0) rotate(-45deg);
+    }
+    45%{
+        transform: translate(100%,-100%) rotate(-45deg); 
+    }
+    50%{
+        transform: translate(-100%,100%) rotate(-45deg); 
+    }
+    100%{
+        transform: translate(0,0) rotate(-45deg);
+    }
+}
+@keyframes puls-shadow {
+    0% {
+        box-shadow: 0 0 20px 0 rgba(31, 128, 83, 0.75) ;
+    }
+    50%{
+        box-shadow: 0 0 20px 0 rgba(31, 128, 83, 0.85) ;
+    }
+    100%{
+        box-shadow: 0 0 20px 0 rgba(31, 128, 83, 0.75) ;
+    }
+}
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+        filter: blur(20px);
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+@keyframes slide-down{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes fade-in-up{
+    0%{
+        transform: translateY(100%);
+        filter: blur(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+@keyframes fade-in-left {
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+        filter: blur(50px);
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+@keyframes fade-in-right {
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+        filter: blur(50px);
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+@keyframes word-fade{
+    0%{
+        opacity: 0;
+        filter:blur(5px);
+    }
+    100%{
+        opacity: 1;
+        filter:blur(0);
+    }
+}
+
