@@ -3,7 +3,7 @@
 
   const header = document.querySelector('header');
   const nav = header.querySelector('nav');
-  const cta = header.querySelector('.secondary-cta-btn');
+  const cta = header.querySelector('.sec-cta-button');
 
   // Create a placeholder so we can put CTA back exactly where it was
   const ctaPlaceholder = document.createComment('cta-original-position');
